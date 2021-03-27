@@ -1,6 +1,9 @@
 <?php
 
+use App\BankAccount;
+use App\FinancialOrganization;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +14,13 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        DB::statement('SET FOREIGN_KEY_CHECKS = 0');
+
+        FinancialOrganization::truncate();
+        BankAccount::truncate();
+
+        factory(FinancialOrganization::class, 10)->create();
+        factory(BankAccount::class, 100)->create();
+
     }
 }
