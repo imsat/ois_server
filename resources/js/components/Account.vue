@@ -25,8 +25,8 @@
                     <td>{{ account.branch }}</td>
                     <td>{{ getAccountType(account.account_type) }}</td>
                     <td>
-                        <a href="#" class="btn btn-sm btn-info float-right mr-1">Edit</a>
-                        <a href="#" class="btn btn-sm btn-danger float-right">Delete</a>
+                        <a href="#" class="btn btn-sm btn-info mr-1">Edit</a>
+                        <a href="#" class="btn btn-sm btn-danger ">Delete</a>
                     </td>
                 </tr>
                 </tbody>
